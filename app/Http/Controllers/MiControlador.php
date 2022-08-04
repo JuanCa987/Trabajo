@@ -9,5 +9,10 @@ class MiControlador extends Controller
     public function multipli($a, $b){
         return 'la multiplicacion da: ' . $a * $b;
     }
+    public function Mariana(){
+        return 'hola soy Mariana';
+     }
 }
+
+
 
