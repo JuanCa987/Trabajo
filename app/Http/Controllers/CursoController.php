@@ -61,7 +61,8 @@ class CursoController extends Controller
      */
     public function show($id)
     {
-        return view('cursos.edit');
+        $cursito = Curso::find($id);
+        return view('cursos.show' , compact('cursito'));
 
     }
 
@@ -73,7 +74,8 @@ class CursoController extends Controller
      */
     public function edit($id)
     {
-        return view('cursos.edit');
+        $cursito = Curso::find($id);
+        return view('cursos.edit' , compact('cursito'));
     }
 
     /**
@@ -85,7 +87,14 @@ class CursoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cursito = Curso::find($id);
+        //return $request;
+        $cursito->fill($request->except('imagen'));
+        if($request->hasFile('imagen')){
+            $cursito->imagen=$request->file('imagen')->store('public/cursos');
+        }
+        $cursito->save();
+        return 'La actualización fue exitosa';
     }
 
     /**
