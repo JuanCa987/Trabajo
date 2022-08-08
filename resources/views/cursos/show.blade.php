@@ -2,14 +2,25 @@
 
 @section('titulo', 'detalle cursos')
 
-@section('contenido');
+@section('contenido')
 
-    <div>
-        <img style="height: 200px; width: 250px" src="{{Storage::url($cursito->imagen)}}" alt="">
+    <br>
+    <br>
+
+    <div class="text-center">
+        <img style="height: 220px; width: 320px" src="{{Storage::url($cursito->imagen)}}" alt="">
         <p>{{$cursito->descripcion}}</p>
         <p>{{$cursito->duracion}}</p>
         <a href="/cursos/{{$cursito->id}}/edit" class="btn btn-primary">Editar</a>
 
+        <br>
+        <br>
+
+        <form  class="form-group" action="/cursos/{{$cursito->id}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </form>
     </div>
 
 @endsection

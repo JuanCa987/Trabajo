@@ -8,6 +8,21 @@
 <form action="/cursos" method="POST" enctype= "multipart/form-data">
     @csrf
     <br>
+
+    @if ($errors->any())
+        @foreach ($errors->all() as $alerta)
+            <div class="alert alert-danger" role="alert">
+                <ul>
+
+                    <li>{{$alerta}}</li>
+
+                </ul>
+
+            </div>
+        @endforeach
+    @endif
+
+    <br>
         <h2>Aqui puedes crear un nuevo curso</h2>
         <div class="form-group">
             <label for="nombre">Nombre del curso</label>
