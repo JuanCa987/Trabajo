@@ -6,8 +6,8 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <a class="navbar-brand " href="/cursos">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+            <a class="navbar-brand " href="/docentes">
                 <img src="{{ asset('logo.png') }}" alt="" width="60px" height="60px">
             </a>
             <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,10 +16,7 @@
             <div id="my-nav" class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/cursos/create">crear curso <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/cursos/nosotros">sobre nosotros <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/docentes/create">Agregar Docente<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
