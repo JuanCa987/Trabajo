@@ -12,7 +12,7 @@
     <img src="{{Storage::url($docentico->foto)}}" alt="">
     <br>
     <br>
-    <iframe width="400" height="400" src="{{Storage::url($docentesitos -> doc_identidad)}}" frameborder="0"></iframe>
+    <iframe width="400" height="400" src="{{Storage::url($docentico -> doc_identidad)}}" frameborder="0"></iframe>
     <p>{{$docentico->nombres}}</p>
     <p>{{$docentico->apellidos}}</p>
     <p>{{$docentico->titulo_universitario}}</p>

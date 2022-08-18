@@ -53,7 +53,7 @@ class CursoController extends Controller
        }
        $cursito->duracion = $request-> input('duracion');
        $cursito->save(); //con el comando save se registra en la bd
-       return 'guardado exitosamente';
+       return view('docentes.to_update');
        //return $request->input('nombre');
 
     }
@@ -99,7 +99,7 @@ class CursoController extends Controller
             $cursito->imagen=$request->file('imagen')->store('public/cursos');
         }
         $cursito->save();
-        return 'La actualización fue exitosa';
+        return view('docentes.save');
     }
 
     /**
@@ -120,6 +120,6 @@ class CursoController extends Controller
         //return $rutaCompleta;
         unlink($rutaCompleta);
         $cursito->delete();
-        return 'Eliminado';
+        return view('docentes.remove');
     }
 }
