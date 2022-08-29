@@ -18,6 +18,8 @@ return new class extends Migration
             $table->text('nombre');
             $table->unsignedBigInteger('id_pais');
 
+            $table->foreign('id_pais')->references('id')->on('paises')->onDelete('cascade')->onUpdate('cascade');;
+
         });
     }
 

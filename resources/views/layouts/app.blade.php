@@ -6,7 +6,7 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top" >
             <a class="navbar-brand " href="/cursos">
                 <img src="{{ asset('logo.png') }}" alt="" width="60px" height="60px">
             </a>
@@ -27,7 +27,7 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="/cursos/nosotros">Sobre Nosotros<span class="sr-only">(current)</span></a>
                     </li>
-                    
+
                 </ul>
             </div>
         </nav>

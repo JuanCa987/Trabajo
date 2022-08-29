@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('paises', function (Blueprint $table) {
             $table->id();
             $table->text('nombre');
+
+
         });
     }
 
