@@ -56,8 +56,8 @@ class DocentesController extends Controller
         }
         $docentico->save();
         return view('docentes.to_update');
-       
-    }   
+
+    }
 
     /**
      * Display the specified resource.

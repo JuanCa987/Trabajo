@@ -4,7 +4,7 @@
 
 @section('contenido')
 
-<form action="/docentes/{{$docentico->id}}" method="POST" enctype= "multipart/form-data">
+<form action="/Estudiantes/{{$docentico->id}}" method="POST" enctype= "multipart/form-data">
     @method('PUT')
     @csrf
     <br>

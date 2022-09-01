@@ -5,7 +5,7 @@
 @section('contenido')
 
 
-<form action="/docentes" method="POST" enctype= "multipart/form-data">
+<form action="/estudiantes" method="POST" enctype= "multipart/form-data">
 @csrf
     <br>
 
@@ -23,38 +23,127 @@
         @endif
 
     <br>
-        <h2>Aqui puedes agregar al nuevo docente</h2>
-        <div class="form-group">
-            <label for="nombres">Nombre del docente</label>
-            <input id="nombres" class="form-control" type="text" name="nombres">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6">
+                <h2>Documento de identidad</h2>
+                <div class="form-group">
+                    <label for="tipo_documento">Tipo de documento *</label>
+                    <select id="tipo_documento" class="form-control" name="tipo_documento">
+                        <option>TI</option>
+                        <option>CC</option>
+                        <option>CE</option>
+                        <option>PAS</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="apellidos">No. de documento *</label>
+                    <input id="apellidos" class="form-control" type="text" name="apellidos">
+                </div>
+                <div class="form-group">
+                    <label for="cargar_documento">Cargar Docum. Identificación *</label>
+                    <br>
+                    <input id="cargar_documento" type="file" name="cargar_documento">
+                </div>
+                <div class="form-group">
+                    <label for="pais_expedicion">Pais de expedición *</label>
+                    <select id="pais_expedicion" class="form-control" name="pais_expedicion">
+                        @foreach ($paises as $paisito)
+                            <option value="">{{ $paisito->nombre}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="departamento_expedicion">Departamento donde fue expedido *</label>
+                    <select id="departamento_expedicion" class="form-control" name="departamento_expedicion">
+                        @foreach ($departamentos as $depart)
+                            <option value="">{{ $depart->nombre}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="municipio_expedicion">Municipio donde fue expedido *</label>
+                    <select id="municipio_expedicion" class="form-control" name="municipio_expedicion">
+                        @foreach ($municipios as $munic)
+                            <option value="">{{ $munic->nombre}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fecha_expedicion">Feha de expedición *</label>
+                    <input id="fecha_expedicion" class="form-control" type="date" name="fecha_expedicion">
+                </div>
+            </div>
+
+
+            <div class="col-6 col-cm-4">
+                <h2>Datos de identificación</h2>
+                <div class="form-group">
+                    <label for="nombres">Nombres *</label>
+                    <input id="nombres" class="form-control" type="text" name="nombres">
+                </div>
+                <div class="form-group">
+                    <label for="primer_apellido">Primer Apellido *</label>
+                    <input id="primer_apellido" class="form-control" type="text" name="primer_apellido">
+                </div>
+                <div class="form-group">
+                    <label for="segundo_apellido">Segundo Apellido *</label>
+                    <input id="segundo_apellido" class="form-control" type="text" name="segundo_apellido">
+                </div>
+                <div class="form-group">
+                    <label for="genero">Genero *</label>
+                    <select id="genero" class="form-control" name="genero">
+                        <option>F</option>
+                        <option>M</option>
+                        <option>No especifica</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fecha_nacimiento">Feha de nacimiento *</label>
+                    <input id="fecha_nacimiento" class="form-control" type="date" name="fecha_nacimiento">
+                </div>
+                <div class="form-group">
+                    <label for="pais_nacimiento">Pais de nacimiento *</label>
+                    <select id="pais_nacimiento" class="form-control" name="pais_nacimiento">
+                        @foreach ($paises as $paisito)
+                        <option value="">{{ $paisito->nombre}}</option>
+                    @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="departamento_nacimiento">Departamento de nacimiento *</label>
+                    <select id="departamento_nacimiento" class="form-control" name="departamento_nacimiento">
+                        @foreach ($departamentos as $depart)
+                            <option value="">{{ $depart->nombre}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="municipio_nacimiento">Municipio de nacimiento *</label>
+                    <select id="municipio_nacimiento" class="form-control" name="municipio_nacimiento">
+                        @foreach ($municipios as $munic)
+                            <option value="">{{ $munic->nombre}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="estrato">Estrato Socioeconómico *</label>
+                    <select id="estrato" class="form-control" name="estrato">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+
         </div>
-        <div class="form-group">
-            <label for="apellidos">Apellidos del docente</label>
-            <input id="apellidos" class="form-control" type="text" name="apellidos">
+        <div class="text-center">
+            <button class="btn btn-light" type="submit">Regresar</button>
+            <button class="btn btn-success" type="submit">Continuar</button>
         </div>
-        <div class="form-group">
-            <label for="titulo_universitario">Titulo universitario</label>
-            <input id="titulo_universitario" class="form-control" type="text" name="titulo_universitario">
-        </div>
-        <div class="form-group">
-            <label for="edad">Edad del docente</label>
-            <input id="edad" class="form-control" type="text" name="edad">
-        </div>
-        <div class="form-group">
-            <label for="fecha_contrato">Feha de contrato</label>
-            <input id="fecha_contrato" class="form-control" type="date" name="fecha_contrato">
-        </div>
-        <div class="form-group">
-            <label for="foto">Foto</label>
-            <br>
-            <input id="foto" type="file" name="foto">
-        </div>
-        <div class="form-group">
-            <label for="doc_identidad">Cargar documento de identidad</label>
-            <br>
-            <input id="doc_identidad" type="file" name="doc_identidad">
-        </div>
-        <button class="btn btn-dark" type="submit">Guardar</button>
+    </div>
 </form>
 
 

@@ -22,6 +22,12 @@
                         <a class="nav-link" href="/docentes/create">Agregar Docente<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
+                        <a class="nav-link" href="/estudiantes/create">Agregar Estudiantes<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/estudiantes">Listado Estudiantes<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
                         <a class="nav-link" href="/docentes">Listado Docentes<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
