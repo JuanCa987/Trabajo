@@ -6,7 +6,7 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top" >
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:lightblue;">
             <a class="navbar-brand " href="/cursos">
                 <img src="{{ asset('logo.png') }}" alt="" width="60px" height="60px">
             </a>

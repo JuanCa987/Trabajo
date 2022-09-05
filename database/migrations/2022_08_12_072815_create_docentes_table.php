@@ -20,9 +20,14 @@ return new class extends Migration
             $table->string('apellidos');
             $table->text('titulo_universitario');
             $table->integer('edad');
-            $table->text('fecha_contrato');
+            $table->date('fecha_contrato');
             $table->text('foto');
             $table->string('doc_identidad');
+            $table->unsignedBigInteger('id_cursos');
+
+
+            $table->foreign('id_cursos')->references('id')->on('cursos')->onDelete('cascade')->onUpdate('cascade');;
+
 
         });
     }

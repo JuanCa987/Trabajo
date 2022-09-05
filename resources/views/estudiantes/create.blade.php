@@ -23,10 +23,12 @@
         @endif
 
     <br>
+    <div class="text-center" style="color: lightblue">
+        <h2>Datos de identificacion</h2>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-6 col-sm-6">
-                <h2>Documento de identidad</h2>
                 <div class="form-group">
                     <label for="tipo_documento">Tipo de documento *</label>
                     <select id="tipo_documento" class="form-control" name="tipo_documento">
@@ -77,7 +79,6 @@
 
 
             <div class="col-6 col-cm-4">
-                <h2>Datos de identificación</h2>
                 <div class="form-group">
                     <label for="nombres">Nombres *</label>
                     <input id="nombres" class="form-control" type="text" name="nombres">

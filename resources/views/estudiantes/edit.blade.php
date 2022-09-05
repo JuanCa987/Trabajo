@@ -4,18 +4,18 @@
 
 @section('contenido')
 
-<form action="/Estudiantes/{{$docentico->id}}" method="POST" enctype= "multipart/form-data">
+<form action="/estudiantes/{{$estudiantico->id}}" method="POST" enctype= "multipart/form-data">
     @method('PUT')
     @csrf
     <br>
         <h2>Formulario de actualización de información de los docentes.</h2>
         <div class="form-group">
             <label for="nombres">Edita el nombre</label>
-            <input id="nombres" class="form-control" type="text" name="nombres" value="{{$docentico->nombres}}">
+            <input id="nombres" class="form-control" type="text" name="nombres" value="{{$estudiantico->nombres}}">
         </div>
         <div class="form-group">
             <label for="apellidos">Edita el apellido</label>
-            <input id="apellidos" class="form-control" type="text" name="apellidos" value="{{$docentico->apellidos}}">
+            <input id="apellidos" class="form-control" type="text" name="apellidos" value="{{$estudiantico->apellidos}}">
         </div>
         <div class="form-group">
             <label for="titulo_universitario">Edita el titulo universitario</label>

@@ -7,10 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Paises extends Model
 {
+    
     use HasFactory;
 
     //relacion uno a muchos
     public function departamentos(){
         return $this->hasMany(Departamento::class);
     }
+
 }

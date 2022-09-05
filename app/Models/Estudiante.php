@@ -7,10 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Estudiante extends Model
 {
-    protected $fillable = ['tipo_documento', 'num_documento', 'documento_identidad', 'pais_expedicion',
-    'deapartamento_expedicion', 'municipio_expedicion', 'fecha_expedicion','nombre','primer_apellido',
-    'segundo_apellido','genero','fecha_nacimiento','pais_nacimiento','departamento_nacimiento','municipio_nacimiento',
-    'estrato'];
+    protected $fillable = ['tipo_documento', 'num_documento', 'documento_identidad', 'fecha_expedicion','nombre','primer_apellido',
+    'segundo_apellido','genero','fecha_nacimiento','estrato'];
     use HasFactory;
 
         //relacion uno a muchos

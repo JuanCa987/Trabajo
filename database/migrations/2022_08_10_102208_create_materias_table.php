@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('nombre_materia');
             $table->integer('intensidad_horario');
 
-            $table->foreign('id')->references('id')->on('docentes')->onDelete('cascade')->onUpdate('cascade');;
         });
     }
 

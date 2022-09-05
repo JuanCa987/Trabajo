@@ -32,7 +32,6 @@ class EstudiantesController extends Controller
         $paises = Paises::all();
         $departamentos = Departamento::all();
         $municipios = Municipio::all();
-        $municipios = Municipio::all();
         return view('estudiantes.create', compact('paises','departamentos','municipios'));
     }
 
@@ -47,22 +46,15 @@ class EstudiantesController extends Controller
         $estudiantico = new Estudiante();
         $estudiantico->tipo_documento = $request-> input('tipo_documento');
         $estudiantico->num_documento = $request-> input('num_documento');
-        $estudiantico->pais_expedicion= $request-> input('pais_expedicion');
-        $estudiantico->deapartamento_expedicion = $request-> input('deapartamento_expedicion');
-        $estudiantico->municipio_expedicion= $request-> input('municipio_expedicion');
-        $estudiantico->fecha_expedicion= $request-> input('fecha_expedicion');
+        if($request->hasFile('documento_identidad')){
+            $estudiantico->documento_identidad = $request->file('documento_identidad')->store('public/estudiantes');
+        }
         $estudiantico->nombre= $request-> input('nombre');
         $estudiantico->primer_apellido= $request-> input('primer_apellido');
         $estudiantico->segundo_apellido= $request-> input('segundo_apellido');
         $estudiantico->genero= $request-> input('genero');
         $estudiantico->fecha_nacimiento= $request-> input('fecha_nacimiento');
-        $estudiantico->pais_nacimiento= $request-> input('pais_nacimiento');
-        $estudiantico->departamento_nacimiento= $request-> input('departamento_nacimiento');
-        $estudiantico->municipio_nacimiento= $request-> input('municipio_nacimiento');
         $estudiantico->estrato= $request-> input('estrato');
-        if($request->hasFile('documento_identidad')){
-            $estudiantico->documento_identidad = $request->file('documento_identidad')->store('public/estudiantes');
-        }
         $estudiantico->save();
         return view('Estudiantes.to_update');
 
@@ -88,7 +80,8 @@ class EstudiantesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $estudiantico = Estudiantes::find($id);
+        return view('estudiantes.edit' , compact('estudiantico'));
     }
 
     /**
