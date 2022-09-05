@@ -49,10 +49,13 @@ class EstudiantesController extends Controller
         if($request->hasFile('documento_identidad')){
             $estudiantico->documento_identidad = $request->file('documento_identidad')->store('public/estudiantes');
         }
+        $estudiantico->municipio_expedicion = $request-> input('municipio_expedicion');
+        $estudiantico->fecha_expedicion = $request-> input('fecha_expedicion');
         $estudiantico->nombre= $request-> input('nombre');
         $estudiantico->primer_apellido= $request-> input('primer_apellido');
         $estudiantico->segundo_apellido= $request-> input('segundo_apellido');
         $estudiantico->genero= $request-> input('genero');
+        $estudiantico->municipio_nacimiento = $request-> input('municipio_nacimiento');
         $estudiantico->fecha_nacimiento= $request-> input('fecha_nacimiento');
         $estudiantico->estrato= $request-> input('estrato');
         $estudiantico->save();
@@ -80,7 +83,7 @@ class EstudiantesController extends Controller
      */
     public function edit($id)
     {
-        $estudiantico = Estudiantes::find($id);
+        $estudiantico = Estudiante::find($id);
         return view('estudiantes.edit' , compact('estudiantico'));
     }
 

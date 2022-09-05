@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('documento_identidad');
             $table->date('fecha_expedicion');
             $table->unsignedBigInteger('municipio_expedicion');
-            $table->string('nombre');
+            $table->text('nombre');
             $table->string('primer_apellido');
             $table->string('segundo_apellido');
             $table->text('genero');

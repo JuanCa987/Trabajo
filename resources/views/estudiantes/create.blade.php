@@ -39,13 +39,13 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="apellidos">No. de documento *</label>
-                    <input id="apellidos" class="form-control" type="text" name="apellidos">
+                    <label for="num_documento">No. de documento *</label>
+                    <input id="num_documento" class="form-control" type="text" name="num_documento">
                 </div>
                 <div class="form-group">
-                    <label for="cargar_documento">Cargar Docum. Identificación *</label>
+                    <label for="documento_identidad">Cargar Docum. Identificación *</label>
                     <br>
-                    <input id="cargar_documento" type="file" name="cargar_documento">
+                    <input id="documento_identidad" type="file" name="documento_identidad">
                 </div>
                 <div class="form-group">
                     <label for="pais_expedicion">Pais de expedición *</label>
@@ -72,7 +72,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="fecha_expedicion">Feha de expedición *</label>
+                    <label for="fecha_expedicion">Fecha de expedición *</label>
                     <input id="fecha_expedicion" class="form-control" type="date" name="fecha_expedicion">
                 </div>
             </div>
@@ -80,8 +80,8 @@
 
             <div class="col-6 col-cm-4">
                 <div class="form-group">
-                    <label for="nombres">Nombres *</label>
-                    <input id="nombres" class="form-control" type="text" name="nombres">
+                    <label for="nombre">Nombres *</label>
+                    <input id="nombre" class="form-control" type="text" name="nombre">
                 </div>
                 <div class="form-group">
                     <label for="primer_apellido">Primer Apellido *</label>
