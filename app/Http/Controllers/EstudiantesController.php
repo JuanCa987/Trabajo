@@ -72,7 +72,8 @@ class EstudiantesController extends Controller
      */
     public function show($id)
     {
-
+        $estudiantico = Estudiante::find($id);
+        return view('estudiantes.show' , compact('estudiantico'));
     }
 
     /**
@@ -84,7 +85,8 @@ class EstudiantesController extends Controller
     public function edit($id)
     {
         $estudiantico = Estudiante::find($id);
-        return view('estudiantes.edit' , compact('estudiantico'));
+        $municipios = Municipio::all();
+        return view('estudiantes.edit' , compact('estudiantico', 'municipios'));
     }
 
     /**
@@ -96,7 +98,14 @@ class EstudiantesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $estudiantico = Estudiante::find($id);
+        //return $request;
+        $estudiantico->fill($request->except('foto'));
+        if($request->hasFile('foto')){
+            $estudiantico->foto=$request->file('foto')->store('public/cursos');
+        }
+        $estudiantico->save();
+        return view('estudiantes.save');
     }
 
     /**
@@ -107,6 +116,8 @@ class EstudiantesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $estudiantico = Estudiante::find($id);
+        $estudiantico->delete();
+        return view('docentes.remove');
     }
 }

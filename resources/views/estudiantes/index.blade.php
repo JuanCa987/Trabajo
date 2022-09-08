@@ -14,9 +14,11 @@
         <div class="col-sm">
             <div class="card text-center" style="width: 18rem; margin:20px">
                 <div class="card-body">
-                    <h5 class="card-title">{{$item->nombre}}</h5>
-                    <h5 class="card-title">{{$item->primer_apellido}}</h5>
-                    <h5 class="card-title">{{$item->segundo_apellido    }}</h5>
+                    <iframe width="200" height="200"src="{{Storage::url($item->documento_identidad)}}" frameborder="0"></iframe>
+                    <h5 class="card-title">{{$item->num_documento}}</h5>
+                    <h5 class="card-title">{{$item->nombre}}{{' '}}{{$item->primer_apellido}}{{' '}}{{$item->segundo_apellido}}</h5>
+                    <h5 class="card-title">{{$item->fecha_nacimiento}}</h5>
+                    <h5 class="card-title">{{$item->estrato}}</h5>
 
                     <a href="/estudiantes/{{$item->id}}" class="btn btn-primary">Ver Detalle</a>
                 </div>
