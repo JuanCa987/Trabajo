@@ -7,7 +7,7 @@
 <br>
 <br>
 <br>
-<h2>Listado Estudiantes</h2>
+<h2 class="text-center">Listado Estudiantes</h2>
 
 <div class="row">
     @foreach ($estudiantico as $item)

@@ -13,13 +13,13 @@
             <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="my-nav" class="collapse navbar-collapse">
+            <div id="my-nav" class="collapse navbar-collapse" style="font-family:Arial, Helvetica, sans-serif;">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/cursos/create">Crear Curso<span class="sr-only">(current)</span></a>
+                        <a class="nav-link"  href="/cursos/create">Crear Curso<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/docentes/create">Agregar Docente<span class="sr-only">(current)</span></a>
+                        <a class="nav-link"  href="/docentes/create">Agregar Docente<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="/estudiantes/create">Agregar Estudiantes<span class="sr-only">(current)</span></a>

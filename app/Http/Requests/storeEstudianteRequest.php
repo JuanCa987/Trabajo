@@ -24,7 +24,18 @@ class storeEstudianteRequest extends FormRequest
     public function rules()
     {
         return [
-            
+            'tipo_documento'=>'required|max:30',
+            'num_documento'=>'required|max:12',
+            'documento_identidad'=>'required|mimes:pdf',
+            'fecha_expedicion'=>'required|date',
+            'nombre'=>'required|max:30',
+            'primer_apellido'=>'required|max:30',
+            'segundo_apellido'=>'required|max:30',
+            'genero'=>'required|max:30',
+            'fecha_nacimiento'=>'required|date',
+            'estrato'=>'required|max:30'
+
+
         ];
     }
 }

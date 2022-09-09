@@ -65,7 +65,8 @@
                 </div>
                 <div class="form-group">
                     <label for="municipio_expedicion">Municipio donde fue expedido *</label>
-                    <select id="municipio_expedicion" class="form-control" name="municipio_expedicion">
+                    <select id="municipio_expedicion" class="form-control" name="municipio_expedicion" required>
+                        <option>Selleccione</option>
                         @foreach ($municipios as $munic)
                             <option value="">{{ $munic->nombre}}</option>
                         @endforeach
@@ -121,7 +122,8 @@
                 </div>
                 <div class="form-group">
                     <label for="municipio_nacimiento">Municipio de nacimiento *</label>
-                    <select id="municipio_nacimiento" class="form-control" name="municipio_nacimiento">
+                    <select id="municipio_nacimiento" class="form-control" name="municipio_nacimiento" required>
+                        <option>Selleccione</option>
                         @foreach ($municipios as $munic)
                             <option value="">{{ $munic->nombre}}</option>
                         @endforeach

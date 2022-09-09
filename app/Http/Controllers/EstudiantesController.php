@@ -7,6 +7,7 @@ use App\Models\Paises;
 use App\Models\Municipio;
 use App\Models\Estudiante;
 use Illuminate\Http\Request;
+use App\Http\Requests\storeEstudianteRequest;
 
 
 class EstudiantesController extends Controller
@@ -41,7 +42,7 @@ class EstudiantesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(storeEstudianteRequest $request)
     {
         $estudiantico = new Estudiante();
         $estudiantico->tipo_documento = $request-> input('tipo_documento');
@@ -60,7 +61,6 @@ class EstudiantesController extends Controller
         $estudiantico->estrato= $request-> input('estrato');
         $estudiantico->save();
         return view('Estudiantes.to_update');
-
 
     }
 
