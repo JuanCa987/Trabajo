@@ -14,12 +14,16 @@
     <iframe width="300" height="300"src="{{Storage::url($estudiantico->documento_identidad)}}" frameborder="0"></iframe>
     <p>{{$estudiantico->tipo_documento}}</p>
     <p>{{$estudiantico->num_documento}}</p>
+    <p>{{$estudiantico->pais_expedicion}}</p>
+    <p>{{$estudiantico->departamento_expedicion}}</p>
     <p>{{$estudiantico->municipio_expedicion}}</p>
     <p>{{$estudiantico->fecha_expedicion}}</p>
     <p>{{$estudiantico->nombre}}</p>
     <p>{{$estudiantico->primer_apellido}}</p>
     <p>{{$estudiantico->segundo_apellido}}</p>
     <p>{{$estudiantico->genero}}</p>
+    <p>{{$estudiantico->pais_nacimiento}}</p>
+    <p>{{$estudiantico->departamento_nacimiento}}</p>
     <p>{{$estudiantico->municipio_nacimiento}}</p>
     <p>{{$estudiantico->fecha_nacimiento}}</p>
     <p>{{$estudiantico->estrato}}</p>

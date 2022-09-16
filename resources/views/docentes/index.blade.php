@@ -7,7 +7,7 @@
 <br>
 <br>
 <br>
-<h2>Listado Docentes</h2>
+<h2 style="color: lightblue">Listado Docentes</h2>
 
 <div class="row">
     @foreach ($docentico as $item)

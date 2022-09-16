@@ -5,7 +5,7 @@
 @section('contenido')
 <br>
 <br>
-<h2 class="fw-light"> listado de cursos </h2>
+<h2 class="fw-light" style="color: lightblue"> listado de cursos </h2>
 {{--foreach sirve para iterar arrays, es decir permite ciclos en listas--}}
 <div class="row">
     @foreach ($cursito as $item)

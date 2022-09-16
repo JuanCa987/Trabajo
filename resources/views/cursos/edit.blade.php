@@ -8,7 +8,7 @@
     @method('PUT')
     @csrf
     <br>
-        <h2>Formulario de edición del curso</h2>
+        <h2 style="color: lightblue">Formulario de edición del curso</h2>
         <div class="form-group">
             <label for="nombre">Edita el nombre</label>
             <input id="nombre" class="form-control" type="text" name="name" value="{{$cursito->name}}">

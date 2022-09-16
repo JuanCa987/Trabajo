@@ -7,7 +7,7 @@
 
 <form action="/docentes" method="POST" enctype= "multipart/form-data">
 @csrf
-    <br> 
+    <br>
 
         @if ($errors->any())
             @foreach ($errors->all() as $alerta)
@@ -23,7 +23,7 @@
         @endif
 
     <br>
-        <h2>Aqui puedes agregar al nuevo docente</h2>
+        <h2 style="color: lightblue">Aqui puedes agregar al nuevo docente</h2>
         <div class="form-group">
             <label for="nombres">Nombre del docente</label>
             <input id="nombres" class="form-control" type="text" name="nombres">

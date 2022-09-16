@@ -10,4 +10,12 @@ class Curso extends Model
     //Añado permiso paraa manipular campos de la tabla
     protected $fillable = ['nombre', 'descripcion', 'imagen', 'duracion'];
     use HasFactory;
+    
+    public function estudiantes(){
+        return $this->hasMany(Estudiantes::class);
+    }
+
+    public function cursos_materias(){
+        return $this->belongsToMany(curso_materia::class);
+    }
 }

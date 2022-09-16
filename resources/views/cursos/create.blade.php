@@ -23,7 +23,7 @@
     @endif
 
     <br>
-        <h2>Aqui puedes crear un nuevo curso</h2>
+        <h2 style="color: lightblue">Aqui puedes crear un nuevo curso</h2>
         <div class="form-group">
             <label for="nombre">Nombre del curso</label>
             <input id="nombre" class="form-control" type="text" name="name">

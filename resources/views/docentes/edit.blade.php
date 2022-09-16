@@ -8,7 +8,7 @@
     @method('PUT')
     @csrf
     <br>
-        <h2>Formulario de actualización de información de los docentes.</h2>
+        <h2 style="color: lightblue">Formulario de actualización de información de los docentes.</h2>
         <div class="form-group">
             <label for="nombres">Edita el nombre</label>
             <input id="nombres" class="form-control" type="text" name="nombres" value="{{$docentico->nombres}}">

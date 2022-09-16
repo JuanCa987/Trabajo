@@ -26,7 +26,7 @@ class storeCursoRequest extends FormRequest
         return [
             'name'=>'required|max:30',
             'imagen'=>'required|image',
-            'descripcion'=>'required|max:30',
+            'descripcion'=>'required|max:60',
             'duracion'=>'required|numeric:10'
         ];
     }

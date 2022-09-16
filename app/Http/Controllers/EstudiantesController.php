@@ -84,9 +84,32 @@ class EstudiantesController extends Controller
      */
     public function edit($id)
     {
+        // $estudiantico = Estudiante::find($id);
+        // $query1 = Municipio::join(
+        //     'estudiantes','estudiantes.municipio_expedicion','municipios.id'
+        // )
+        // ->join('departamentos','departamentos.id_departamento','dmunicipios.id')
+        // ->join('paises','paises.id_pais','departamentos.id_departamento')
+        // ->where('estudiantes.id', $id)
+        // ->select('municipios.nom_muni as nomMuni','departamentos.nom_departa as NomDepart','paises.nom_paises as nomPaises')
+        // ->get();
+
+        // $query2 = Municipio::join(
+        //     'estudiantes','estudiantes.municipio_nacimiento','municipios.id'
+        // )
+        // ->join('departamentos','departamentos.id_departamento','dmunicipios.id')
+        // ->join('paises','paises.id_pais','epartamentos.id_departamento')
+        // ->where('estudiantes.id', $id)
+        // ->select('municipios.nom_muni as nomMuni','departamentos.nom_departa as NomDepart','paises.nom_paises as nomPaises')
+        // ->get();
+
+        // return view('estudiantes.show', compact('query1', 'query2'));
+
         $estudiantico = Estudiante::find($id);
         $municipios = Municipio::all();
         return view('estudiantes.edit' , compact('estudiantico', 'municipios'));
+
+
     }
 
     /**

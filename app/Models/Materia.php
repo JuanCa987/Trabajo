@@ -9,8 +9,11 @@ class Materia extends Model
 {
     use HasFactory;
 
-        //relacion uno a muchos
-        public function docentes(){
-            return $this->hasMany(Docente::class);
-        }
+    public function docentes(){
+        return $this->hasMany(Docente::class);
+    }
+
+    public function cursos_materias(){
+        return $this->belongsToMany(curso_materia::class);
+    }
 }

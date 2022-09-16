@@ -6,7 +6,9 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:lightblue;">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background: linear-gradient(to bottom, lightblue, white);"
+
+        ">
             <a class="navbar-brand " href="/cursos">
                 <img src="{{ asset('logo.png') }}" alt="" width="60px" height="60px">
             </a>
@@ -39,8 +41,8 @@
         </nav>
         <br>
         <br>
-        <br>
-        <div class="container">
+        <br >
+        <div class="container" >
             @yield('contenido')
         </div>
 
