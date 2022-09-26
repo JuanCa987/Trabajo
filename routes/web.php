@@ -47,3 +47,7 @@ Route::get('/iva/{a}/{b}',[ControladorPrecios::class,'getIVA']);
 route::resource('cursos', CursoController::class);
 Route::resource('docentes', DocentesController::class);
 Route::resource('estudiantes', EstudiantesController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

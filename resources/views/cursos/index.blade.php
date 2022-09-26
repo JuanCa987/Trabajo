@@ -13,7 +13,7 @@
             <div class="card text-center" style="width: 18rem; margin:20px">
                 <img style="height:350px width:150px" src="{{Storage::url($item->imagen)}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">{{$item->nombre}}</h5>
+                    <h5 class="card-title">{{$item->name}}</h5>
                     <p class="card-text">{{$item->descripcion}}</p>
                     <p class="card-text">{{$item->duracion}}</p>
                     <a href="/cursos/{{$item->id}}" class="btn btn-primary">Ver Detalle</a>
