@@ -67,4 +67,15 @@ class EstudianteTest extends TestCase
         ]);
         return $respuesta->assertRedirect('/');
     }
+
+    public function test_delete_Estudiante(){
+        $Estudiante = Estudiante::factory()->count(1)->make();
+
+        $Estudiante = Estudiante::first();
+
+        if($Estudiante){
+            $Estudiante->delete();
+        }
+        $this->assertTrue(true);
+    }
 }

@@ -51,4 +51,15 @@ class DocenteTest extends TestCase
         ]);
         return $respuesta->assertRedirect('/');
     }
+
+    public function test_delete_docente(){
+        $docente = Docentes::factory()->count(1)->make();
+
+        $docente = Docentes::first();
+
+        if($docente){
+            $docente->delete();
+        }
+        $this->assertTrue(true);
+    }
 }

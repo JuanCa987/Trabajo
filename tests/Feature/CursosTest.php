@@ -46,4 +46,15 @@ class CursosTest extends TestCase
         return $respuesta->assertRedirect('/');
     }
 
+    public function test_delete_curso(){
+        $curso = Curso::factory()->count(1)->make();
+
+        $curso = Curso::first();
+
+        if($curso){
+            $curso->delete();
+        }
+        $this->assertTrue(true);
+    }
+
 }
